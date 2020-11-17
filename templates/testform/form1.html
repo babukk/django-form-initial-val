@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <h3>Первая форма</h3>
+  <form method="post" action="/finalform">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Далее &rarr;</button>
+  </form>
+{% endblock %}

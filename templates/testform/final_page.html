@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <h3>Ваш запрос принят</h3>
+  Имя: {{ name }}<br/>
+  Email: {{ email }}<br/>
+  Город: {{ city }}<br />
+  Адрес: {{ address }}<br />
+{% endblock %}
