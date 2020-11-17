@@ -20,7 +20,7 @@ def form2_view(request, *args, **kwargs):
 def final_page(request, *args, **kwargs):
     city = request.POST.get("city", "")
     try:
-        city = CITIES[int(city)][1]
+        city = CITIES[int(city) - 1][1]
     except IndexError as e:
         city = 'Москва'
     address = request.POST.get("address", "")
